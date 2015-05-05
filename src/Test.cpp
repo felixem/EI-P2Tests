@@ -492,7 +492,7 @@ bool generarInforme(const string &directorio,const string& reporte)
 	return sinfallos;
 }
 
-//Volcar contenido de la indexación de cada documento en archivos .index
+//Volcar información de la indexación de cada documento en archivos .index
 bool volcarIndexacion(const IndexadorHash &ind, const string &dirEntrada, long double &tiempo)
 {
 	string ficListaDocs=LISTA_DOCUMENTOS;
@@ -531,7 +531,7 @@ bool volcarIndexacion(const IndexadorHash &ind, const string &dirEntrada, long d
 		std::cout.rdbuf(salida.rdbuf());
 
 		//Listar los términos del documento
-		ind.ListarTerminos(cadena);
+		ind.ListarDocs(cadena);
 
 		//Redirigir cout a su buffer original
 		std::cout.rdbuf(sbuf);
@@ -563,7 +563,7 @@ int runSuiteTemporal(const string& directorioPruebas, const string& directorioSa
 	long double aa = getcputime();
 
 	//Declarar indexador
-	IndexadorHash ind("./StopWordsEspanyol.txt", ".,:;/-@*(){}?!|[]'=_\"><&#-\r\t", false, false, "./indicePrueba", 0, false, true);
+	IndexadorHash ind("./StopWordsEspanyol.txt", " .,:;/-@*(){}?!|[]'=_\"><&#-\r\t", false, false, "./indicePrueba", 0, false, true);
 
 	//Indexar directorio
 	if(testDirectorio(ind,directorioPruebas,directorioSalida,tiempo))
