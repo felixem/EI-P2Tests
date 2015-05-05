@@ -663,7 +663,7 @@ bool comprobarArgumentos(const int &argc, char** argv,
 		else if(strcmp(cad,"-c")==0)
 		{
 			++i;
-			directorioCopia=argv[3];
+			directorioCopia=argv[i];
 			quitarCaracterFinal(directorioCopia,'/');
 		}
 		//Parámetro erróneo
