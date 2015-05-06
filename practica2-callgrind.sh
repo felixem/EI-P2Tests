@@ -7,4 +7,4 @@ make
 
 #Nos movemos al directorio raiz y ejecutamos el programa
 cd ..
-valgrind Compile/EI-Practica2 $*
+valgrind --tool=callgrind Compile/EI-Practica2 $*
