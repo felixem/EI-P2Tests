@@ -45,7 +45,7 @@ all: EI-Practica2
 EI-Practica2: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross G++ Linker'
-	g++ -L"/home/felix/workspace/EI-Practica2/lib" -o "EI-Practica2" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L"../lib" -o "EI-Practica2" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
