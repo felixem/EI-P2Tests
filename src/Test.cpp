@@ -41,6 +41,7 @@ const char* DIRECTORIO_PRUEBAS ="entradas";
 const char* DIRECTORIO_SALIDA ="salidas";
 const char* DIRECTORIO_COPIA="salida_ejecucion";
 const char* DIRECTORIO_DIFERENCIAS="diferencias";
+const char* EXTENSION_TK="tk";
 const char* EXTENSION_INDEX="index";
 const char* EXTENSION_DIFERENCIAS="diff";
 const char* EXTENSION_TXT="txt";
@@ -374,6 +375,10 @@ void limpiarDirectoriosTemporales(const string& directorioPruebas, const string&
 	//Limpiar extensiones de ficheros temporales de los directorios
 	if(limpiarDirectorio(directorioPruebas,EXTENSION_INDEX))
 		cout<<"Directorio "+directorioPruebas<<" limpiado de ."<<EXTENSION_INDEX<<endl;
+
+	//Limpiar extensiones de ficheros temporales de los directorios
+	if(limpiarDirectorio(directorioPruebas,EXTENSION_TK))
+		cout<<"Directorio "+directorioPruebas<<" limpiado de ."<<EXTENSION_TK<<endl;
 
 	//Truncar el directorio de diferencias completo
 	if(borrarDirectorio(directorioComparaciones))
